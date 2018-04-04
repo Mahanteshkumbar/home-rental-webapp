@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 16, 2018 at 08:16 AM
+-- Generation Time: Apr 04, 2018 at 11:23 AM
 -- Server version: 5.7.14
 -- PHP Version: 7.1.9
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `auth`
+-- Database: `newrent`
 --
 
 -- --------------------------------------------------------
@@ -80,7 +80,8 @@ CREATE TABLE `room_rental_registrations` (
 
 INSERT INTO `room_rental_registrations` (`id`, `fullname`, `mobile`, `alternat_mobile`, `email`, `country`, `state`, `city`, `landmark`, `rent`, `sale`, `deposit`, `plot_number`, `rooms`, `address`, `accommodation`, `description`, `image`, `open_for_sharing`, `other`, `vacant`, `created_at`, `updated_at`, `user_id`) VALUES
 (13, 'Mahantesh Kumbar', '2345676567', '98888787', 'admin@admin.com', 'india', 'karnataka', 'Belagavi', 'aaaaaa', '3', '12', '3', '78 nh', '2bhk', 'dsdsd', '4', 'dssd', 'uploads/', NULL, 'zx', 0, '2018-02-16 12:21:43', '2018-02-16 12:21:43', 1),
-(14, 'jelly fish', '2345676997', '', 'chet@gmrail.com', 'india', 'karnataka', 'Belagavi', '', '1232', '12', '33333', '78 nh', '1bhk', 'port road bgm', '', '', 'uploads/', NULL, NULL, 1, '2018-03-09 05:06:43', '2018-03-09 05:06:43', 2);
+(14, 'jelly fish', '2345676997', '', 'chet@gmrail.com', 'india', 'karnataka', 'Belagavi', '', '1232', '12', '33333', '78 nh', '1bhk', 'port road bgm', '', '', 'uploads/', NULL, NULL, 1, '2018-03-09 05:06:43', '2018-03-09 05:06:43', 2),
+(15, 'aaa', '2222222222', '', 'admin@admmmin.com', 'india', 'karnataka', 'Belagavi', '', '1232', '12666', '33333', '78 nh', '1bhk', 'port road bgm', 'wifi,pridge', 'good to see', 'uploads/Penguins.jpg', NULL, NULL, 1, '2018-04-04 11:19:09', '2018-04-04 11:19:09', 1);
 
 -- --------------------------------------------------------
 
@@ -125,8 +126,7 @@ CREATE TABLE `room_rental_registrations_apartment` (
 --
 
 INSERT INTO `room_rental_registrations_apartment` (`id`, `fullname`, `mobile`, `alternat_mobile`, `email`, `country`, `state`, `city`, `landmark`, `rent`, `deposit`, `plot_number`, `apartment_name`, `ap_number_of_plats`, `rooms`, `floor`, `purpose`, `own`, `area`, `address`, `accommodation`, `description`, `image`, `open_for_sharing`, `other`, `vacant`, `created_at`, `updated_at`, `user_id`) VALUES
-(1, 'chandrashekhar Hondad', '9089898989', '98888787', 'admin@admin.com', 'india', 'karnataka', 'Belagavi', 'near ramdev', '0', '0', '78 nh', 'mant apartment', '101', '2bhk', 'Ground Floor', 'Residential', 'owner', '1sqr feet', 'port road bgm', 'wifi', 'well ', 'uploads/', NULL, NULL, 1, '2018-02-17 06:40:49', '2018-02-17 06:40:49', 1),
-(2, 'chandrashekhar Hondad', '9089898989', '98888787', 'admin@admin.com', 'india', 'karnataka', 'Belagavi', 'near ramdev', '1', '1', '78 nh', 'mant apartment', '102', '2bhk', '5th', 'Commercial', 'rented', '1sqr feet', 'port road bgm', 'lift', 'well ', 'uploads/', NULL, NULL, 0, '2018-02-17 06:40:49', '2018-02-17 06:40:49', 1);
+(3, 'mahantesh', '2345676567', '', 'admin@admddin.com', 'india', 'karnataka', 'Belagavi', 'near ramdev', '1212', '22222', '78 nh', 'mant apartment', '101', '2bhk', '2nd', 'Residential', 'rented', '1sqr feet', 'port road bgm', 'wifi', 'well ', 'uploads/Jellyfish.jpg', NULL, NULL, 1, '2018-04-04 11:20:56', '2018-04-04 11:20:56', 1);
 
 -- --------------------------------------------------------
 
@@ -153,11 +153,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `fullname`, `mobile`, `username`, `email`, `password`, `created_at`, `updated_at`, `role`, `status`) VALUES
 (1, 'Mahantesh Kumbar', '9879879787', 'admin', 'admin@admin.com', '21232f297a57a5a743894a0e4a801fc3', NULL, NULL, 'admin', 1),
-(2, 'Mahantesh Kumbar', '56456565', 'manu', 'mant1@gmail.com', '9aee390f19345028f03bb16c588550e1', '2018-02-08 06:53:53', '2018-02-08 06:53:53', 'user', 1),
-(3, 'dd', '3333', 'dd', 'we@DS.COM', '9aee390f19345028f03bb16c588550e1', '2018-02-08 11:21:26', '2018-02-08 11:21:26', 'user', 1),
-(4, 'jelly fish', '4567384856', 'jelly fish', 'mahantesh.kumbar@gmail.com', '9aee390f19345028f03bb16c588550e1', '2018-02-14 05:15:09', '2018-02-14 05:15:09', 'user', 1),
-(5, 'Mahantesh Kumbar', '666666666', 'root', 'user@55gmail.com', 'dc94400359436f34843a23fd3c50d7b0', '2018-02-14 10:15:39', '2018-02-14 10:15:39', 'user', 1),
-(6, 'Mahantesh Kumbar', '9089898989', 'admins', 'user@gmail.comw', '9aee390f19345028f03bb16c588550e1', '2018-02-19 05:33:42', '2018-02-19 05:33:42', 'user', 1);
+(2, 'Mahantesh Kumbar', '56456565', 'manu', 'mant1@gmail.com', '9aee390f19345028f03bb16c588550e1', '2018-02-08 06:53:53', '2018-02-08 06:53:53', 'user', 1);
 
 --
 -- Indexes for dumped tables
@@ -205,12 +201,12 @@ ALTER TABLE `cmps`
 -- AUTO_INCREMENT for table `room_rental_registrations`
 --
 ALTER TABLE `room_rental_registrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT for table `room_rental_registrations_apartment`
 --
 ALTER TABLE `room_rental_registrations_apartment`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `users`
 --
